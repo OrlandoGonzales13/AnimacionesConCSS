@@ -23,13 +23,13 @@
         background: #ccefff;
         box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30),
                     0 15px 12px rgba(0, 0, 0, 0.22);
+        overflow: hidden
     }
     .layer-1{
         position: absolute;
         z-index: 1;
         height: 480px;
         width: 80px;
-        background: papayawhip;
         bottom: 0;
         right: 60px;
     }
@@ -38,7 +38,6 @@
         z-index: 2;
         height: 480px;
         width: 80px;
-        background: white;
         bottom: 0;
         left: 60px;
     }
@@ -58,7 +57,6 @@
         z-index: 4;
         height: 360px;
         width: 80px;
-        background: white;
         bottom: 0;
         left: 30px;
     }   
@@ -76,7 +74,6 @@
         height: 280px;
         width: 80px;
         bottom: 0;
-        background: white;
         left: 215px;
     }
     .layer-7{
@@ -91,19 +88,24 @@
     .layer-8{
         position: absolute;
         z-index: 10;
-        background: pink;
         height: 135px;
         width: 120px;
         bottom: 0;
         left: 0;
     }
     .layer-9{
+        bottom: 0;
+        height: 120px;
+        left: 0;
+        margin: 0 auto;
         position: absolute;
+        right: 0;
+        width: 200px;
+        z-index: 8;
     }
     .layer-10{
         position: absolute;
         z-index: 10;
-        background: pink;
         height: 135px;
         width: 120px;
         bottom: 0;
@@ -165,7 +167,22 @@
         height: 8px;
         position: absolute;
         top: 10px;
+        animation-name: parpadeo;
     }
+
+    @keyframes parpadeo{
+        0%{
+
+        }
+        5%{
+
+        }
+        10%{
+            
+        }
+    }
+
+
     .head__eye--left{
         left: 25px;
     }
@@ -181,6 +198,77 @@
         linear-gradient(-45deg, teal 25%, transparent 25%);
         background-size: 30px 80px;
     }
+
+    .layer-8__left{
+        background: white;
+        border-radius: 40px 40px 0 0;
+        display: inline-block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        width: 80px;
+    }
+    .layer-8__right {
+        background: white;
+        border-radius: 0 40px 30px 0;
+        bottom: 0;
+        display: inline-block;
+        height: 60%;
+        left: 80px;
+        position: absolute;
+        width: 40px;
+    }
+
+    .layer-9__left{
+        background: green;
+        border-radius: 40px 40px 0 0;
+        bottom: 0;
+        display: inline-block;
+        height: 70%;
+        left: 0;
+        position: absolute;
+        width: 80px;
+    }
+    .layer-9__center {
+        background: green;
+        border-radius: 40px 40px 0 0;
+        bottom: 0;
+        display: inline-block;
+        height: 100%;
+        left: 60px;
+        position: absolute;
+        width: 80px;
+    }
+    .layer-9__right {
+        background: green;
+        border-radius: 40px 40px 0 0;
+        bottom: 0;
+        display: inline-block;
+        height: 80%;
+        left: 130px;
+        position: absolute;
+        width: 80px;
+    }
+    .layer-10__left {
+        background: white;
+        border-radius: 40px 0 0 30px;
+        bottom: 0;
+        display: inline-block;
+        height: 60%;
+        right: 80px;
+        position: absolute;
+        width: 40px;
+    }
+    .layer-10__right{
+        background: white;
+        border-radius: 40px 40px 0 0;
+        display: inline-block;
+        height: 100%;
+        right: 0px;
+        position: absolute;
+        width: 80px;
+    }
+
 </style>
 <body>
     <div class="phone">
@@ -243,9 +331,20 @@
 
             </div>
         </div>
-        <div class="layer-8"></div>
-        <div class="layer-9"></div>
-        <div class="layer-10"></div>
+        <div class="layer-8">
+            <div class="layer-8__left"></div>
+            <div class="layer-8__right"></div>
+        </div>
+
+        <div class="layer-9">
+            <div class="layer-9__left"></div>
+            <div class="layer-9__center"></div>
+            <div class="layer-9__right"></div>
+        </div>
+        <div class="layer-10">
+            <div class="layer-10__left"></div>
+            <div class="layer-10__right"></div>
+        </div>
     </div>
 </body>
 </html>
