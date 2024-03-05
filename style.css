@@ -250,14 +250,22 @@ input:checked {
     position: absolute;
     top: 10px;
     animation-name: parpadeo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes parpadeo {
-    0% {}
+    0% {
+        height: 8px;
+    }
 
-    5% {}
+    5% {
+        height: 4px;
+    }
 
-    10% {}
+    10% {
+        height: 4px;
+    }
 }
 
 
